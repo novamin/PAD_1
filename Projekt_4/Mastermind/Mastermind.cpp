@@ -17,7 +17,7 @@
 
 //Funktion für das Spiel-spielen
 void Mastermind::Game() {
-    bool match = true;
+    //bool match = true;
     int rounds = 8;
  
     std::cout << "Bitte geben Sie die Zahl ein, die erraten werden soll. " << std::endl;
@@ -27,20 +27,16 @@ void Mastermind::Game() {
     for(int i = 1; i < rounds; i++){
         std::cout << "Bitte geben Sie eine Zahl ein. " << std::endl;
         std::vector<int> code = check_input();
-        
-        for(int i = 0; i < code.size(); i++){
-            if(code[i] != correct[i]){
-                match = false;
-            }
+            
+        if(black(code, correct) == 4){
+            std::cout << "Gewonnen! " << std::endl;
+            return;
         }
         
-        if(match == true){
-                std::cout << "Gewonnen! " << std::endl;
-                return;
-        }
         std::cout << "Black_markers" << black(code, correct) << std::endl;
         std::cout << "White_Markers" << white(code,correct) << std::endl;
     }
+    
     std::cout << "Game Over!!! " << std::endl;
 }
 
