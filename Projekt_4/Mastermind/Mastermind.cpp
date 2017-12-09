@@ -24,7 +24,7 @@ void Mastermind::Game() {
     std::vector<int> correct = check_input();
 
 //Schleife für die 8 Runden, die zu spielen sind
-    for(int i = 1; i < rounds; i++){
+    for(int i = 0; i < rounds; i++){
         std::cout << "Bitte geben Sie eine Zahl ein. " << std::endl;
         std::vector<int> code = check_input();
             

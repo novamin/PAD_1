@@ -41,7 +41,7 @@ int white(const std::vector<T>& solution, const std::vector<T>& guess)
     int counter = 0;
     for(int i = 0; i < guess.size(); i++){
         for(int j = 0; j < solution.size(); j++){
-            if(solution[j] == guess[i]){
+            if(solution[j] == guess[i] && i != j){
                 counter++;
             }
         }
