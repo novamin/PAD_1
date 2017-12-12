@@ -15,13 +15,13 @@
 #include <iostream>
 
 DynArray::DynArray(): m_capacity(8)  {
-    m_data = new double[8];
+    m_data = new double[m_capacity];
     
 }
 
 
 DynArray::DynArray(int newCapacity): m_capacity(newCapacity){
-    m_data = new double[newCapacity];
+    m_data = new double[m_capacity];
     
 }
 
