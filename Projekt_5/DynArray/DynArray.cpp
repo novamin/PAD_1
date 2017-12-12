@@ -14,13 +14,13 @@
 #include "DynArray.h"
 #include <iostream>
 
-DynArray::DynArray() {
+DynArray::DynArray(): m_capacity(8)  {
     m_data = new double[8];
     
 }
 
 
-DynArray::DynArray(int newCapacity){
+DynArray::DynArray(int newCapacity): m_capacity(newCapacity){
     m_data = new double[newCapacity];
     
 }

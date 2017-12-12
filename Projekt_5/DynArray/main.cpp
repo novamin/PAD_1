@@ -12,7 +12,7 @@
  */
 
 #include <cstdlib>
-
+#include <iostream>
 #include "DynArray.h"
 
 using namespace std;
@@ -30,9 +30,9 @@ int main(int argc, char** argv) {
     array.push_back(2.2);
     array.push_back(3.3);
     array.push_back(111.1);
-    
+    array.capacity();
     array.erase(3);
-    
+    cout << array.capacity() << endl;
     array.print();
     
     return 0;
